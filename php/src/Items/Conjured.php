@@ -20,12 +20,14 @@ class Conjured extends DefaultItem {
             return;
         }
 
-        if ($this->sell_in >= 0) {
+        $this->quality = $this->quality - 2;
+
+        if ($this->sell_in < 0) {
             $this->quality = $this->quality - 2;
             return;
         }
 
-        $this->quality = $this->quality - 2;
+
     }
 
 }

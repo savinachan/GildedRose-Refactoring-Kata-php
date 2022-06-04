@@ -15,12 +15,12 @@ class AgedBrie extends DefaultItem {
             return;
         }
 
-        if ($this->sell_in >= 0) {
+        $this->quality = $this->quality + 1;
+
+        if ($this->sell_in < 0) {
             $this->quality = $this->quality + 1;
-            return;
         }
 
-        $this->quality = $this->quality + 1;
     }
 
 }
